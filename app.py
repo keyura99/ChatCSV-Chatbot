@@ -22,9 +22,8 @@ def load_llm():
     )
     return llm
 
-st.header("Chat with CSV using llama2🦙🦜")
-st.markdown("Talk to your CSV Files with Chat CSV Chatbot❤️!")
-# st.markdown("<h3 style=color: white;'>Built by <a href='https://github.com/Kartiksood10'>Kartik Sood with❤️</a></h3>", unsafe_allow_html=True)
+st.header("Chat with CSV using llama2")
+st.markdown("Talk to your CSV Files with Chat CSV Chatbot!")
 
 uploaded_file = st.sidebar.file_uploader("Upload your CSV file:", type="csv")
 
@@ -64,7 +63,7 @@ if uploaded_file:
 
     # session state that stores generated response by LLM
     if 'generated' not in st.session_state:
-        st.session_state['generated'] = ["Hello, Ask me anything about " + uploaded_file.name + "🤗"]
+        st.session_state['generated'] = ["Hello, Ask me anything about " + uploaded_file.name ]
 
     # session state that stores the input queries of the user
     if 'past' not in st.session_state:
